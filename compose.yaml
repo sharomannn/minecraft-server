@@ -19,6 +19,7 @@ services:
         https://mediafilez.forgecdn.net/files/7598/586/xaerominimap-forge-1.20.1-25.3.10.jar
         https://mediafilez.forgecdn.net/files/6906/993/L_Enders_Cataclysm-3.16.jar
         https://mediafilez.forgecdn.net/files/5922/47/lionfishapi-2.4-Fix.jar
+        https://mediafilez.forgecdn.net/files/6418/456/curios-forge-5.14.1%2B1.20.1.jar
     volumes:
       - ./data:/data
     secrets:
