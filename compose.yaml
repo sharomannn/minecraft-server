@@ -17,8 +17,6 @@ services:
       MEMORY: "3G"
       MODS: |
         https://mediafilez.forgecdn.net/files/7598/586/xaerominimap-forge-1.20.1-25.3.10.jar
-        https://mediafilez.forgecdn.net/files/7411/282/controllable-forge-1.20.1-0.21.8.jar
-        https://mediafilez.forgecdn.net/files/7573/740/framework-forge-1.20.1-0.8.0.jar
     volumes:
       - ./data:/data
     secrets:
