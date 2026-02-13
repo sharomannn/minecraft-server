@@ -19,7 +19,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: mkdir -p /opt/minecraft-server
+          script: mkdir -p ~/minecraft-server
 
       - name: Copy files to server
         uses: appleboy/scp-action@v1
@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "compose.yaml,.env.example"
-          target: /opt/minecraft-server
+          target: ~/minecraft-server
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
@@ -40,7 +40,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           envs: RCON_PASSWORD
           script: |
-            cd /opt/minecraft-server
+            cd ~/minecraft-server
             if [ ! -f rcon_password ]; then
               echo "$RCON_PASSWORD" > rcon_password
               chmod 600 rcon_password
